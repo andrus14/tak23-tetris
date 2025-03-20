@@ -23,3 +23,32 @@ body {
     background-color: white;
     font-size: 10px;
 }
+
+#game-board div.s-block {
+    background-color: red;
+}
+
+#game-board div.z-block {
+    background-color: green;
+}
+
+#game-board div.l-block {
+    background-color: orange;
+}
+
+#game-board div.j-block {
+    background-color: blue;
+}
+
+#game-board div.o-block {
+    background-color: yellow;
+}
+
+#game-board div.t-block {
+    background-color: purple;
+}
+
+#game-board div.i-block {
+    background-color: cyan;
+}
+
