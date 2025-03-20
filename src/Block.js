@@ -83,6 +83,30 @@ class Block {
 
     }
 
+    canRotate ( gameBoard ) {
+
+        let ret = true;
+
+        const newShapeIndex = (this.shapeIndex + 1) % this.shapes.length;
+
+        if ( this.x + this.shapes[newShapeIndex].width >= gameBoard.width ) {
+            return false;
+        }
+
+        this.shapes[newShapeIndex].shape.forEach( el => {
+            const y = el[0] + this.y;
+            const x = el[1] + this.x;
+
+            if ( gameBoard.state[y][x] ) {
+                ret = false;
+            }
+
+        });
+
+        return ret;
+
+    }
+
     stop ( gameBoard ) {
 
         this.shapes[this.shapeIndex].shape.forEach( el => {

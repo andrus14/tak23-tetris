@@ -26,6 +26,18 @@ document.addEventListener('keydown', e => {
                 gameBoard.draw(currentBlock);
             }
             break;
+        case 'arrowup':
+            if ( currentBlock.canRotate(gameBoard) ) {
+                currentBlock.shapeIndex = (currentBlock.shapeIndex + 1) % currentBlock.shapes.length;
+                gameBoard.draw(currentBlock);
+            }
+            break;
+        case 'arrowdown':
+            if ( currentBlock.canMoveDown(gameBoard) ) {
+                currentBlock.moveDown();
+                gameBoard.draw(currentBlock);
+            }
+            break;
     }
 });
 
