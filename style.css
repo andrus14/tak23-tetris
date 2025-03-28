@@ -19,6 +19,15 @@ body {
     border: 1px solid #cccccc;
 }
 
+#game-over {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 #game-board div {
     background-color: white;
     font-size: 10px;

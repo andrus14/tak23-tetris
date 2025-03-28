@@ -12,6 +12,15 @@ class OBlock extends Block {
 
     class = 'o-block';
 
+    constructor ( gb ) {
+        
+        super();
+
+        this.y = 0 - this.shapes[0].height;
+        this.x = Math.floor((gb.width - this.shapes[0].width) / 2);
+    
+    }
+    
 }
 
 export { OBlock }
